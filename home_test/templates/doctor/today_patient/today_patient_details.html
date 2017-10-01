@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% include 'doctor/common/header.html' %}
+
+<div class="today-patient-details">
+
+ <div class="row page-head">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+   <h1>today patient details</h1>
+  </div>
+  
+  <div class="col-md-8 col-sm-8 col-xs-12">
+   	<!-- search -->
+    <form class="search">
+	  <i class="fa fa-search" aria-hidden="true"></i>
+      <input type="search" class="filter" data-table="table" placeholder="search..." maxlength="100" />
+    </form>
+	
+	<button type="button" onclick="window.location.href = '/home_test/dotodaypatient/' ">back</button>
+  </div> 
+ </div>
+
+
+<!-- details table -->
+ <div class="row">
+  <div class="col-md-12 table-responsive">
+  <div class="common-table">
+   <table class="table my-pagination">
+    <thead>
+	 <tr class="tr-head">
+	  <th>Sl.No</th>
+	  <th>Date</th>
+	  <th>Name</th>
+	  <th>Serial No</th>
+	  <th>User</th>
+	  <th>Price</th>
+	 </tr>
+	</thead>
+
+	<tbody>
+	<tr class="tr-body">
+	  <td>1</td>
+	  <td>30/08/2017</td>
+	  <td>bla bla bla</td>
+	  <td>54445</td>
+	  <td>bla bla</td>
+	  <td>230</td>
+	 </tr>
+	 <!--
+     <tr class="no-data">
+      <td colspan="20">No Data</td>
+     </tr>-->
+	</tbody>
+
+	<tfoot></tfoot>
+   </table>
+   </div>
+ </div>
+</div>
+<!-- /details table -->
+	
+
+</div><!-- today-patient-details -->
+
+{% endblock %}

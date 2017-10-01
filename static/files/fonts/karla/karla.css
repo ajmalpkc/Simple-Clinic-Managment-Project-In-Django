@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'karlaregular';
+    src: url('karla-regular-webfont.woff2') format('woff2'),
+         url('karla-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

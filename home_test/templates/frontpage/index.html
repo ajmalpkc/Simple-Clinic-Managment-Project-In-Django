@@ -1,0 +1,59 @@
+{% block content %}
+{% load static %}
+{% include 'frontpage/header.html' %}
+
+  <div class="home">
+   <div class="wrapper">
+     <div class="row">
+	 <h1>New Dental Clinic Set-up, Made Easy!</h1>
+	    <div class="col-md-offset-3 col-md-6">
+	   <!-- login --> 
+       <form method="post" action="">
+        <h3>Login</h3>
+        <input type="text" placeholder="Username" name="username" maxlength="100" />
+        <input type="password" placeholder="Password" name="password" maxlength="100" />
+        <button type="submit">Login</button>
+        </div>
+       </form>
+		
+		<button type="button" style="position: fixed; bottom: 0; right: 0;" data-toggle="modal" data-target="#access-popup">Access</button>
+	    </div>
+	 </div>
+ 
+
+  
+ 
+
+<!-- only using access popup -->
+<div class="modal fade pop-up" id="access-popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"> 
+      <form method="post" action="" class="">
+  <div class="body pop-up-small">
+  
+   <div class="modal-header">
+    <button type="button" title="Close" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+  </div>
+    
+  <div class="modal-body">
+   <div class="row">
+    
+	<div class="pop-up-col">
+     <h5><a href="/home_test/dotodaypatient/">Doctor</a></h5>
+	 <h5><a href="/home_test/retodaybooking/">Receptionist</a></h5>
+	 <h5><a href="/home_test/patienthome/">Patient</a></h5>
+    </div>
+
+   </div>
+   
+  </div> 
+  </div> 
+</form>
+    </div>
+  </div>
+</div>
+
+</div>
+ 
+{% include 'frontpage/footer.html' %}
+{% endblock %}

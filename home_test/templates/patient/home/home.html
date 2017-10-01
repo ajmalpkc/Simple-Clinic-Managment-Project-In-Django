@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% include 'patient/common/header.html' %}
+
+<div class="today-patients">
+
+ <div class="row page-head">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+   <h1>today patients</h1>
+  </div>
+  
+  <div class="col-md-8 col-sm-8 col-xs-12">
+   	<!-- search -->
+    <form class="search">
+	  <i class="fa fa-search" aria-hidden="true"></i>
+      <input type="search" class="filter" data-table="table" placeholder="search..." maxlength="100" />
+    </form>
+
+  </div> 
+ </div>
+
+ 
+
+<div class="row">
+  <div class="col-md-12">
+   <div class="page-form">
+   
+    <div class="page-col">
+     <label>Bla bla</label>
+	 <select>
+	  <option>-- select --</option>
+	  <option>bla bla</option>
+	 </select>
+	</div>
+	<div class="page-col">
+     <label>Bla bla</label>
+	 <select>
+	  <option>-- select --</option>
+	  <option>bla bla</option>
+	 </select>
+	</div>
+	<div class="page-col">
+	 <label>Bla bla</label>
+	 <input type="text" placeholder="Date pick" class="date-pick" name="name" maxlength="100" />
+	</div>
+
+	<div class="footer">
+	 <button type="submit" onclick="window.location.href = '/home_test/padetails/' ">Ok</button>
+	</div>
+	
+   </div>
+  </div> 
+</div>
+
+
+</div><!-- today-patients -->
+
+{% endblock %}

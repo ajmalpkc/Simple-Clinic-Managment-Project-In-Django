@@ -1,0 +1,30 @@
+.pagination.button {
+    background: transparent;
+    color: #21383e;
+    font-weight: normal;
+    border: none;
+    font-size: 25px;
+	box-shadow: none;}
+.pagination.next.button {
+    margin-left: 8px;}
+.pagination.previous.button {
+    margin-right: 8px;}
+.pagination.button { 
+    margin: 0 1px;}
+.pagination.button .fa { 
+    font-size: 25px;}
+.pagination.button {
+    display: none;}
+.pagination.next.button,
+.pagination.previous.button {
+    display: inline-block;}	
+.pagination-button {
+	text-align: center;
+    position: relative;
+    top: 10px;}
+.my-pagination tfoot {
+    border: solid transparent;
+    border-top: 1px;}
+.my-pagination tfoot td{
+    border: none;}	
+	 

@@ -1,0 +1,93 @@
+{% load static %}
+
+<!-- header -->
+<div class="container-fluid">
+<header class="row header">
+
+<!-- left -->
+ <div class="col-md-7 col-sm-7 col-xs-9 left">
+ 
+  <h1>New Dental Clinic</h1>
+  <div class="toggle">
+  <h4><i class="fa fa-arrow-left" aria-hidden="true"></i></h4>
+  <h4><i class="fa fa-arrow-right" aria-hidden="true"></i></h4>
+  </div>
+  
+  
+  <!-- side menu toggle -->
+  <div class="toggle-nav">
+   <div class="icon-reorder tooltips" data-original-title="toggle Navigation" data-placement="bottom">
+   <i class="fa fa-align-justify" aria-hidden="true"></i>
+   <i class="fa fa-arrow-left" aria-hidden="true"></i>
+   </div>
+  </div>
+ </div>
+
+
+ 
+<!-- right -->
+<div class="col-md-5 col-sm-5 col-xs-3 right">
+ <ul>
+
+ <!-- change password -->
+  <li class="change-password"> 
+  <ul class="animate-dropdown">
+	 <li class="dropdown">
+      <div class="dropdown-toggle"><a class="dropdown-toggle" data-toggle="dropdown">
+	  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+	  <span>doctor</span></a></div>
+      <ul class="dropdown-menu">
+	  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+	 <!-- <img src="{% static '" alt="profile image" />-->
+	  <h5>doctor</h5>
+	  <button type="button" onclick="window.location.href = '/home_test/dochangepassword/' ">Change password</button>
+	  <button type="button" onclick="window.location.href = '/' ">Logout</button>
+      </ul>
+     </li>
+	 </ul>
+  </li>
+ <!-- /change password -->
+
+ </ul>
+ </div>
+ 
+</header>
+</div>
+<!-- /header -->
+
+
+
+<!-- side-menu Links -->
+<div class="side-menu">
+     <div id="sidebar">
+		<ul class="sidebar-menu"> 
+          <li>
+            <a href="/home_test/dotodaypatient/">
+             <i class="fa fa-link" aria-hidden="true"></i>
+             <span>today patients</span>
+            </a>
+          </li>
+	      <li class="sub-menu">
+           <a href="javascript:;">
+           <i class="fa fa-link" aria-hidden="true"></i>
+           <span>main link</span>
+		   <i class="fa fa-angle-double-down" aria-hidden="true"></i>
+           </a>
+           <ul class="sub">
+            <li><a href="#">
+			<i class="fa fa-arrow-right" aria-hidden="true"></i>
+			<span>sub link</span>
+			</a></li>
+           </ul>
+          </li>
+
+         <div class="sidebar-footer">
+            <a></a>
+         </div>
+         </ul>
+		    
+  </div>		 
+</div>
+<!-- /side-menu -->
+
+<div class="container-fluid main-body">

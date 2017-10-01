@@ -1,0 +1,81 @@
+{% load static %}
+<link href="{% static 'patient/css/patient.css' %}" rel="stylesheet" type="text/css" />
+
+<!-- header -->
+<div class="container-fluid">
+<header class="row header">
+
+<!-- left -->
+ <div class="col-md-7 col-sm-7 col-xs-9 left">
+ 
+  <h1>New Dental Clinic</h1>
+  <div class="toggle">
+  <h4><i class="fa fa-arrow-left" aria-hidden="true"></i></h4>
+  <h4><i class="fa fa-arrow-right" aria-hidden="true"></i></h4>
+  </div>
+  
+  
+  <!-- side menu toggle -->
+  <div class="toggle-nav">
+   <div class="icon-reorder tooltips" data-original-title="toggle Navigation" data-placement="bottom">
+   <i class="fa fa-align-justify" aria-hidden="true"></i>
+   <i class="fa fa-arrow-left" aria-hidden="true"></i>
+   </div>
+  </div>
+ </div>
+
+
+ 
+<!-- right -->
+<div class="col-md-5 col-sm-5 col-xs-3 right">
+ <ul>
+
+ <!-- change password -->
+  <li class="change-password"> 
+  <ul class="animate-dropdown">
+	 <li class="dropdown">
+      <div class="dropdown-toggle"><a class="dropdown-toggle" data-toggle="dropdown">
+	  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+	  <span>patient</span></a></div>
+      <ul class="dropdown-menu">
+	  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+	 <!-- <img src="{% static '" alt="profile image" />-->
+	  <h5>patient</h5>
+	  <button type="button" onclick="window.location.href = '/home_test/pachangepassword/' ">Change password</button>
+	  <button type="button" onclick="window.location.href = '/' ">Logout</button>
+      </ul>
+     </li>
+	 </ul>
+  </li>
+ <!-- /change password -->
+
+ </ul>
+ </div>
+ 
+</header>
+</div>
+<!-- /header -->
+
+
+
+<!-- side-menu Links -->
+<div class="side-menu">
+     <div id="sidebar">
+		<ul class="sidebar-menu"> 
+          <li>
+            <a href="/home_test/patienthome/">
+             <i class="fa fa-link" aria-hidden="true"></i>
+             <span>home</span>
+            </a>
+          </li>
+	
+         <div class="sidebar-footer">
+            <a></a>
+         </div>
+         </ul>
+		    
+  </div>		 
+</div>
+<!-- /side-menu -->
+
+<div class="container-fluid main-body">

@@ -1,0 +1,93 @@
+.header {
+    background: #45476d;}
+.toggle .fa {
+    color: #acadc5;}
+	
+	
+	
+
+	
+/* today-patients */
+	
+/* page-form */
+.today-patients .page-form {
+	margin: 0 auto;
+	margin-top: 10px;
+	float: none;}
+.today-patients .page-form input[type=""], 
+.today-patients .page-form input[type="text"], 
+.today-patients .page-form input[type="number"], 
+.today-patients .page-form input[type="date"], 
+.today-patients .page-form input[type="password"], 
+.today-patients .page-form input[type="email"], 
+.today-patients .page-form input[type="url"], 
+.today-patients .page-form select {
+    border-radius: 4px;}
+.today-patients .page-form .page-col {
+    width: 100%;
+    height: auto;
+	float: left;
+	clear: left;}
+.today-patients .page-form .footer {
+    float: none;
+    text-align: center;}
+.today-patients .page-form .footer button {
+     margin-top: 15px;
+	 margin-right: 0;}	 
+@media (min-width: 768px) {
+.today-patients .page-form {
+    width: 33.33333333%;}
+.today-patients .page-form .page-col:nth-child(odd) {
+     padding-right: 0;}
+.today-patients .page-form .page-col:nth-child(even) {
+     padding-left: 0;}		
+}	
+@media (max-width: 767px) {
+.today-patients .page-form {
+    width: 50%;}
+} 
+@media (max-width: 499px) {
+.today-patients .page-form {
+    width: 100%;}
+.today-patients .page-form .footer {
+    float: left;
+	margin-top: 10px;}	
+} 
+
+
+
+
+	
+/* today-patient-details */
+
+/* list */
+.today-patient-details .list {
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    padding: 15px;
+	border-radius: 2px;}	
+.today-patient-details .list label {
+	padding-right: 5px;}	
+.today-patient-details .list button {
+	margin-top: 15px;}	
+.today-patient-details .list h6 {
+	font-size: 18px;
+    background: #edeef5;
+    padding: 4px 0 0 8px;
+    border-radius: 2px;}	
+
+@media (min-width: 768px) {
+.today-patient-details .list {
+    width: 33.33333333%;}	
+}	
+@media (max-width: 767px) {
+.today-patient-details .list {
+    width: 50%;}
+.today-patient-details .list h3 {
+	font-size: 20px;}
+} 
+@media (max-width: 499px) {
+.today-patient-details .list {
+    width: 100%;}
+} 

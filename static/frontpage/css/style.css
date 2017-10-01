@@ -1,0 +1,169 @@
+/* import css files */
+@import '../../files/plugins/bootstrap/css/bootstrap.min.css';
+@import '../../files/fonts/font-awesome/css/font-awesome.min.css';
+
+
+/* common */ 
+::-moz-selection { background: #03c7b8; color: #fff; }
+::selection { background: #03c7b8; color: #fff;}
+button:focus,
+input[type="submit"]:focus  {
+    outline: none;}
+a:hover, 
+a:focus {
+     text-decoration: none;
+	 color: #6b6b6b;}
+a {
+   text-decoration: none !important;}
+@media (max-width: 499px) {
+body { 
+   text-align: center;}
+}  
+  
+  
+  
+/* body */  
+body {
+     font-family: "ralewayregular",Helvetica Neue,Helvetica,Arial,sans-serif;
+	 font-size: 16px;
+	 color: #6b6b6b;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,.5)), url(../images/home-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto 650px;
+    height: 650px;
+    color: #fff;}	
+@media (max-width: 499px) {
+body {
+    background-size: auto 550px;
+    height: 550px;}
+}
+
+
+	
+/* wrapper */   
+.wrapper {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;}
+@media (min-width: 1200px) {
+.wrapper {
+    max-width: 3000px;
+	padding: 0 100px;}
+}
+@media (max-width: 1199px) {
+.wrapper {
+	padding: 0 70px;}
+}  
+@media (max-width: 991px) {
+.wrapper {
+	padding: 0 50px;}
+} 
+@media (max-width: 767px) {
+.wrapper {
+	padding: 0 30px;}
+} 
+@media (max-width: 499px) {
+.wrapper {
+	padding: 0 15px;}
+} 
+   
+  
+
+ 
+
+
+/* button */
+button {
+	margin-top: 15px;
+	padding: 5px 20px;
+	font-size: 15px;
+	background: none;
+    border: solid 1px #d3d2da;
+    color: #000;
+	text-transform: capitalize;
+	border-radius: 2px;}
+button:hover  {}
+
+
+	
+  
+/* pre-loader */  
+.pre-loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.89) url(../../files/images/pre-loader.gif) center no-repeat;}
+
+	
+/* home */	
+.home {
+	text-align: center;
+	padding: 60px 0;}
+.home h1 {
+	padding: 15px 0;}	
+.home p {
+	width: 50%;
+	margin: 0 auto;}  
+.home button {
+	margin-top: 50px;
+	color: #fff;}
+@media (max-width: 767px) {
+.home {
+	padding: 28px 0;}
+.home h1 {
+	padding: 15px 0;
+	font-size: 20px;}
+.home p {
+	width: 82%;
+	font-size: 14px;} 
+.home button {
+	font-size: 13px;}
+}
+	
+  
+  
+/* form */
+form {
+    background: rgba(26, 46, 96, 0.18);
+    padding: 50px 30px;
+	border-radius: 4px;}
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    color: #000;
+	padding: 10px;
+    border: solid #bfbfbf;
+    border-radius: 2px;
+    margin: 25px 0 0 0;
+    border-width: 0 0 1px 0;
+	outline: none;}
+@media (max-width: 767px) {
+form {
+    padding: 20px 30px;}	
+form h3 {
+    font-size: 17px;}	
+form input[type="text"],
+form input[type="password"] {
+	padding: 8px;}
+}
+
+
+	
+/* footer */
+footer {
+	text-align: center;
+	padding: 130px 20px 0;
+	color: #999;}
+footer p {
+	margin: 0;}	
+@media (max-width: 767px) {
+footer {
+	font-size: 12px;
+    padding: 40px 0 10px !important;}
+}
+	

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% include 'patient/common/header.html' %}
+
+<div class="today-patient-details">
+
+ <div class="row page-head">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+   <h1>today patient details</h1>
+  </div>
+  
+  <div class="col-md-8 col-sm-8 col-xs-12">
+	<button type="button" onclick="window.location.href = '/home_test/patienthome/' ">back</button>
+  </div> 
+ </div>
+
+
+<div class="row">
+ <div class="col-md-12">
+  <div class="list">
+   <h3><label>bla bla bla:</label> <span>bla bla bla</span></h3>
+   <h4><label>bla bla bla:</label> <span>bla bla bla</span></h4>
+   <h5><label>bla bla bla:</label> <span>bla bla bla</span></h5>
+   <h5><label>bla bla bla:</label> <span>bla bla bla</span></h5>
+   <h6><label>Mobile:</label> <span>bla bla bla</span></h6>
+   <button type="button">Ok</button>
+  </div>
+ </div>
+</div>
+	
+
+</div><!-- today-patient-details -->
+
+{% endblock %}
