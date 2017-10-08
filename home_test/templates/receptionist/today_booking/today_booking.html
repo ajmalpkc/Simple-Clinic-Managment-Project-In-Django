@@ -8,6 +8,7 @@
  <div class="row page-head">
   <div class="col-md-4 col-sm-4 col-xs-12">
    <h1>today booking</h1>
+   <button type="button" onclick="window.location.href = '/home_test/addpatient/' ">Add</button>
   </div>
   
   <div class="col-md-8 col-sm-8 col-xs-12">
@@ -30,26 +31,28 @@
 	 <tr class="tr-head">
 	  <th>Sl.No</th>
 	  <th>Date</th>
-	  <th>Name</th>
-	  <th>Serial No</th>
-	  <th>User</th>
-	  <th>Price</th>
+	  <th>Patient Name</th>
+	  <th>Doctor Name</th>
+	  <th>Token</th>
 	 </tr>
 	</thead>
 
 	<tbody>
+	{% if today_booking %}
+		{% for app in today_booking %}
 	<tr class="tr-body">
-	  <td>1</td>
-	  <td>30/08/2017</td>
-	  <td><a class="a-link" href="/home_test/doctorlist/">bla bla bla</a></td>
-	  <td>54445</td>
-	  <td>bla bla</td>
-	  <td>230</td>
+	  <td>{{app.id}}</td>
+	  <td>{{app.date}}</td>
+	  <td><a class="a-link" href="/home_test/doctorlist/">{{app.patient}}</a></td>
+	  <td>{{app.doctor}}</td>
+	  <td>{{app.token}}</td>
 	 </tr>
-	 <!--
+	 {% endfor %}
+	 {% else %}
      <tr class="no-data">
       <td colspan="20">No Data</td>
-     </tr>-->
+     </tr>
+     {% endif %}
 	</tbody>
 
 	<tfoot></tfoot>

@@ -7,8 +7,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.core.urlresolvers import reverse
 
 from .forms import SignInForm
-from .models import UserProfile
+from .models import UserProfile, Treatment, Appoiment, Bill
 
+from datetime import date
 # doctor
 def dotodaypatient(request):
     return render(request, "doctor/today_patient/today_patient.html",{})
@@ -21,8 +22,8 @@ def dochangepassword(request):
 
 # receptionist
 def retodaybooking(request):
-
-    return render(request, "receptionist/today_booking/today_booking.html",{})	
+    today_booking = Appoiment.objects.filter(date=date.today())
+    return render(request, "receptionist/today_booking/today_booking.html",{ 'today_booking': today_booking})	
 
 def doctorlist(request):
     return render(request, "receptionist/doctor_list/doctor_list.html",{})
@@ -35,6 +36,9 @@ def readddepartment(request):
 
 def rechangepassword(request):
     return render(request, "receptionist/common/change_password.html",{})
+
+def readdpatient(request):
+    return render(request, "receptionist/today_booking/add_patient.html", {})
 	
 # patient	
 def patienthome(request):

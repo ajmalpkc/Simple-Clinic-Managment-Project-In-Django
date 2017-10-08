@@ -13,6 +13,7 @@ from .views import (
 	redepartment,
 	readddepartment,
 	rechangepassword,
+	readdpatient,
 	
   # patient
     patienthome,
@@ -35,6 +36,7 @@ urlpatterns = [
 	 url(r'^redepartment/$', redepartment, name='redepartment'),
 	 url(r'^readddepartment/$', readddepartment, name='readddepartment'),
 	 url(r'^rechangepassword/$', rechangepassword, name='rechangepassword'),
+	 url(r'^addpatient/$', readdpatient, name="addpatient"),
 	 
 	 # patient
 	 url(r'^patienthome/$', patienthome, name='patienthome'),
