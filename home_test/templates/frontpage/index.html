@@ -10,6 +10,7 @@
 	   <!-- login --> 
        <form method="post" action="">
         <h3>Login</h3>
+        {% csrf_token %}
         <input type="text" placeholder="Username" name="username" maxlength="100" />
         <input type="password" placeholder="Password" name="password" maxlength="100" />
         <button type="submit">Login</button>
