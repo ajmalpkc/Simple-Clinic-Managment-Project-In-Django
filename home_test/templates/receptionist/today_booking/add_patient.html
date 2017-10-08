@@ -20,27 +20,15 @@
   <div class="col-md-12">
    <div class="page-form">
    
-    <div class="page-col">
-	 <label>Input</label>
-	 <input type="text" name="name" maxlength="100" />
-	</div>
-	<div class="page-col">
-	 <label>Input</label>
-	 <input type="text" name="name" maxlength="100" />
-	</div>
-	<div class="page-col">
-	 <label>Input</label>
-	 <input type="text" name="name" maxlength="100" />
-	</div>
-	<div class="page-col">
-	 <label>Input</label>
-	 <input type="text" name="name" maxlength="100" />
-	</div>
+   <form method="post" action="">
+    	{% csrf_token %}
+    	{{ form.as_p }}
 	
 	<div class="footer">
 	 <button type="submit">Save</button>
 	 <button type="button" onclick="window.location.href = '/home_test/redepartment/' ">Back</button>
 	</div>
+	</form>
 	
    </div>
   </div> 

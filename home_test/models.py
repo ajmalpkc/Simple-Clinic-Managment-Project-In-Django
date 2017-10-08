@@ -30,6 +30,8 @@ class Patient(models.Model):
 	age = models.IntegerField(blank=True, null=True)
 	created_at = models.DateField(auto_now_add=True, blank=True, null=True)
 	updated_at = models.DateField(auto_now=True, blank=True, null=True)
+	def __str__(self):
+		return str(self.name)
 
 class Treatment(models.Model):
 	patient = models.ForeignKey(Patient)

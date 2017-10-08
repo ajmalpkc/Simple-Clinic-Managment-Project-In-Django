@@ -6,7 +6,7 @@ from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from django.core.urlresolvers import reverse
 
-from .forms import SignInForm
+from .forms import SignInForm, PatientForm
 from .models import UserProfile, Treatment, Appoiment, Bill
 
 from datetime import date
@@ -38,7 +38,13 @@ def rechangepassword(request):
     return render(request, "receptionist/common/change_password.html",{})
 
 def readdpatient(request):
-    return render(request, "receptionist/today_booking/add_patient.html", {})
+    form = PatientForm()
+    if request.method == 'POST':
+        form = PatientForm(request.POST)
+        if form.is_valid():
+            patient = form.save()
+            return HttpResponseRedirect("/home_test/retodaybooking/")
+    return render(request, "receptionist/today_booking/add_patient.html", { 'form': form})
 	
 # patient	
 def patienthome(request):
