@@ -10,10 +10,13 @@ from .views import (
   # receptionist
     retodaybooking,
 	doctorlist,
-	redepartment,
-	readddepartment,
+	rebill,
+	readdbill,
 	rechangepassword,
 	readdpatient,
+	patientlist,
+	readdappoinment,
+	readdtreatment,
 	
   # patient
     patienthome,
@@ -33,10 +36,13 @@ urlpatterns = [
 	# receptionist
 	 url(r'^retodaybooking/$', retodaybooking, name='retodaybooking'),
 	 url(r'^doctorlist/$', doctorlist, name='doctorlist'),
-	 url(r'^redepartment/$', redepartment, name='redepartment'),
-	 url(r'^readddepartment/$', readddepartment, name='readddepartment'),
+	 url(r'^rebill/$', rebill, name='rebill'),
+	 url(r'^readdbill/$', readdbill, name='readdbill'),
 	 url(r'^rechangepassword/$', rechangepassword, name='rechangepassword'),
 	 url(r'^addpatient/$', readdpatient, name="addpatient"),
+	 url(r'^patientlist/$', patientlist, name="patientlist"),
+	 url(r'^addappoinment/$', readdappoinment, name="addappoinment"),
+	 url(r'^addtreatment/$', readdtreatment, name="addtreatment"),
 	 
 	 # patient
 	 url(r'^patienthome/$', patienthome, name='patienthome'),

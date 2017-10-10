@@ -6,8 +6,8 @@ from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from django.core.urlresolvers import reverse
 
-from .forms import SignInForm, PatientForm
-from .models import UserProfile, Treatment, Appoiment, Bill
+from .forms import SignInForm, PatientForm, AppoimentForm, TreatmentForm, BillForm
+from .models import UserProfile, Treatment, Appoiment, Bill, Patient
 
 from datetime import date
 # doctor
@@ -23,16 +23,48 @@ def dochangepassword(request):
 # receptionist
 def retodaybooking(request):
     today_booking = Appoiment.objects.filter(date=date.today())
-    return render(request, "receptionist/today_booking/today_booking.html",{ 'today_booking': today_booking})	
+    today_treatment = Treatment.objects.filter(created_at=date.today())
+    return render(request, "receptionist/today_booking/today_booking.html",{ 'today_booking': today_booking, 'today_treatment': today_treatment})
+
+def readdappoinment(request):
+    form = AppoimentForm()
+    if request.method == 'POST':
+        form = AppoimentForm(request.POST)
+        if form.is_valid():
+            appoiment = form.save()
+            return HttpResponseRedirect("/home_test/retodaybooking/")
+    return render(request, "receptionist/today_booking/add_appoinment.html", { 'form': form})
+
+def readdtreatment(request):
+    form = TreatmentForm()
+    if request.method == 'POST':
+        form = TreatmentForm(request.POST)
+        if form.is_valid():
+            treatment = form.save()
+            return HttpResponseRedirect("/home_test/retodaybooking/")
+    return render(request, "receptionist/today_booking/add_treatment.html", { 'form': form})
 
 def doctorlist(request):
-    return render(request, "receptionist/doctor_list/doctor_list.html",{})
+    doctors = UserProfile.objects.filter(user_type='DOCTOR')
+    return render(request, "receptionist/doctor_list/doctor_list.html",{ 'doctors': doctors})
 
-def redepartment(request):
-    return render(request, "receptionist/department/department.html",{})
+def patientlist(request):
+    patients = Patient.objects.all()
+    print(patients)
+    return render(request, "receptionist/patient_list/patient_list.html",{ 'patients': patients})
 
-def readddepartment(request):
-    return render(request, "receptionist/department/department_add.html",{})	
+def rebill(request):
+    bills = Bill.objects.filter(date=date.today())
+    return render(request, "receptionist/bill/bill.html",{ 'bills': bills})
+
+def readdbill(request):
+    form = BillForm()
+    if request.method == 'POST':
+        form = BillForm(request.POST)
+        if form.is_valid():
+            bill = form.save()
+            return HttpResponseRedirect("/home_test/rebill/")
+    return render(request, "receptionist/bill/bill_add.html",{ 'form': form})	
 
 def rechangepassword(request):
     return render(request, "receptionist/common/change_password.html",{})

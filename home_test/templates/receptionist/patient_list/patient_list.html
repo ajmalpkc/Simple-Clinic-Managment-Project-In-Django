@@ -7,7 +7,7 @@
 
  <div class="row page-head">
   <div class="col-md-4 col-sm-4 col-xs-12">
-   <h1>doctor list</h1>
+   <h1>Patient list</h1><button type="button" onclick="window.location.href = '/home_test/addpatient/' ">Add New Patient</button>
   </div>
   
   <div class="col-md-8 col-sm-8 col-xs-12">
@@ -30,24 +30,30 @@
 	 <tr class="tr-head">
 	  <th>Sl.No</th>
 	  <th>Name</th>
-	  <th>Department</th>
-	  <th>Mobile No</th>
-	  <th>Qualifications</th>
+	  <th>Serial No</th>
+	  <th>email</th>
+	  <th>phone</th>
+	  <th>address</th>
+	  <th>sex</th>
+	  <th>age</th>
 	 </tr>
 	</thead>
 
 	<tbody>
-	{% if doctors %}
-		{% for doc in doctors %}
+	{% if patients %}
+	{% for pat in patients %}
 	<tr class="tr-body">
 	  <td>{{forloop.counter}}</td>
-	  <td>{{doc.user.first_name}} {{doc.user.last_name}}</td>
-	  <td>{{doc.user_specialised}}</td>
-	  <td>{{doc.user_mobile}}</td>
-	  <td>{{doc.user_qualification}}</td>
+	  <td>{{pat.name}}</td>
+	  <td>{{pat.id}}</td>
+	  <td>{{pat.email}}</td>
+	  <td>{{pat.phone}}</td>
+	  <td>{{pat.address}}</td>
+	  <td>{{pat.sex}}</td>
+	  <td>{{pat.age}}</td>
 	 </tr>
-	 {% endfor %}
-	 {% else %}
+	{% endfor %}
+	{% else %}
      <tr class="no-data">
       <td colspan="20">No Data</td>
      </tr>

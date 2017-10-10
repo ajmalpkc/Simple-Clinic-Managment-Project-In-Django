@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+{% include 'receptionist/common/header.html' %}
+
+<div class="add-department">
+
+ <div class="row page-head">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+   <h1>add bill</h1>
+  </div>
+  
+  <div class="col-md-8 col-sm-8 col-xs-12">
+   <button type="button" onclick="window.location.href = '/home_test/rebill/' ">Back</button>
+  </div> 
+ </div>
+
+
+<div class="row">
+  <div class="col-md-12">
+   <div class="page-form">
+   
+   <form method="post" action="">
+    	{% csrf_token %}
+    	{{ form.as_p }}
+	
+	<div class="footer">
+	 <button type="submit">Save</button>
+	 <button type="button" onclick="window.location.href = '/home_test/rebill/' ">Back</button>
+	</div>
+	</form>
+	
+   </div>
+  </div> 
+</div>
+
+
+</div><!-- add-department -->
+
+{% endblock %}

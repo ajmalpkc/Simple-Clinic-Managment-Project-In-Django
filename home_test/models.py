@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-USER_TYPE = (('DOCTOR', 'DOCTOR'), ('RECEPTIONIST', 'RECEPTIONIST'), ('PATIENT', 'PATIENT'),)
+USER_TYPE = (('DOCTOR', 'DOCTOR'), ('RECEPTIONIST', 'RECEPTIONIST'),)
 USER_SPECIALISED = (('EMPLANT', 'EMPLANT'), ('ORTHO', 'ORTHO'))
 USER_GENDER = (('MALE', 'MALE'), ('FEMALE', 'FEMALE'))
 # Create your models here.
@@ -37,11 +37,14 @@ class Treatment(models.Model):
 	patient = models.ForeignKey(Patient)
 	doctor = models.ForeignKey(User, related_name='treat_doctor')
 	title = models.CharField(max_length=50)
+	token = models.IntegerField()
 	description = models.CharField(max_length=100, blank=True, null=True)
 	dental_position = models.CharField(max_length=50, blank=True, null=True)
 	dental_test = models.CharField(max_length=100, blank=True, null=True)
 	created_at = models.DateField(auto_now_add=True, blank=True, null=True)
 	updated_at = models.DateField(auto_now=True, blank=True, null=True)
+	def __str__(self):
+		return str(self.patient)
 
 class Appoiment(models.Model):
 	patient = models.ForeignKey(Patient)
@@ -64,3 +67,5 @@ class Bill(models.Model):
 	doctor = models.ForeignKey(User, related_name='bill_doctor')
 	treatment = models.ForeignKey(Treatment)
 	amount = models.IntegerField()
+	def __str__(self):
+		return str(self.patient)

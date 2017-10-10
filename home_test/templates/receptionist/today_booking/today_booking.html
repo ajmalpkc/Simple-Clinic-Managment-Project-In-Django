@@ -8,7 +8,7 @@
  <div class="row page-head">
   <div class="col-md-4 col-sm-4 col-xs-12">
    <h1>today booking</h1>
-   <button type="button" onclick="window.location.href = '/home_test/addpatient/' ">Add</button>
+   <button type="button" onclick="window.location.href = '/home_test/addappoinment/' ">Add New Appoinment</button>
   </div>
   
   <div class="col-md-8 col-sm-8 col-xs-12">
@@ -34,6 +34,7 @@
 	  <th>Patient Name</th>
 	  <th>Doctor Name</th>
 	  <th>Token</th>
+	  <th>Time</th>
 	 </tr>
 	</thead>
 
@@ -41,11 +42,12 @@
 	{% if today_booking %}
 		{% for app in today_booking %}
 	<tr class="tr-body">
-	  <td>{{app.id}}</td>
+	  <td>{{forloop.counter}}</td>
 	  <td>{{app.date}}</td>
 	  <td><a class="a-link" href="/home_test/doctorlist/">{{app.patient}}</a></td>
 	  <td>{{app.doctor}}</td>
 	  <td>{{app.token}}</td>
+	  <td>{{app.time}}</td>
 	 </tr>
 	 {% endfor %}
 	 {% else %}
@@ -64,5 +66,66 @@
 
 
 </div><!-- today-booking -->
+<div class="today-booking">
+
+ <div class="row page-head">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+   <h1>today Treatments</h1>
+   <button type="button" onclick="window.location.href = '/home_test/addtreatment/' ">Add New Treatment</button>
+  </div>
+  
+  <div class="col-md-8 col-sm-8 col-xs-12">
+   	<!-- search -->
+    <form class="search">
+	  <i class="fa fa-search" aria-hidden="true"></i>
+      <input type="search" class="filter" data-table="table" placeholder="search..." maxlength="100" />
+    </form>
+
+  </div> 
+ </div>
+
+ 
+<!-- details table -->
+ <div class="row">
+  <div class="col-md-12 table-responsive">
+  <div class="common-table">
+   <table class="table my-pagination">
+    <thead>
+	 <tr class="tr-head">
+	  <th>Sl.No</th>
+	  <th>Patient Name</th>
+	  <th>Doctor Name</th>
+	  <th>Title</th>
+	  <th>Token</th>
+	 </tr>
+	</thead>
+
+	<tbody>
+	{% if today_treatment %}
+		{% for app in today_treatment %}
+	<tr class="tr-body">
+	  <td>{{forloop.counter}}</td>
+	  <td>{{app.patient}}</td>
+	  <td>{{app.doctor}}</td>
+	  <td>{{app.title}}</td>
+	  <td>{{app.token}}</td>
+	 </tr>
+	 {% endfor %}
+	 {% else %}
+     <tr class="no-data">
+      <td colspan="20">No Data</td>
+     </tr>
+     {% endif %}
+	</tbody>
+
+	<tfoot></tfoot>
+   </table>
+   </div>
+ </div>
+</div>
+<!-- /details table -->
+
+
+</div>
 
 {% endblock %}
